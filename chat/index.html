@@ -1,0 +1,229 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KDT chatBox</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+<style class="cp-pen-styles">
+
+body {   
+  font-family: "proxima-nova", "Source Sans Pro", sans-serif; 
+}
+
+#frame { 
+  height: 100vh;   
+  position: fixed;
+  bottom: 63px;
+  margin: 0px 5%; 
+  overflow-y: auto;
+} 
+.logo{
+    font-size: 2rem;
+    padding: 8px;
+    text-align: center; 
+
+}
+#frame::-webkit-scrollbar{
+    width: 0px;
+}
+ 
+#frame .content .messages ul li {
+  display: inline-block;
+  clear: both; 
+  width:100%; 
+} 
+
+#frame .content .messages ul li p { 
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border: 2px solid rgb(73, 72, 72); 
+    border-radius: 20px;
+    margin: 4px;
+}
+#frame .content .messages ul li.sent p { 
+    float: right;
+    border-top-right-radius: 0px;
+} 
+#frame .content .messages ul li.repleis p { 
+    float: left;
+    border-top-left-radius: 0px ; 
+} 
+ 
+
+#frame .content .message-input {
+  position: fixed;
+  bottom: 0; 
+  z-index: 99;
+  position: fixed;
+  background: rgb(255, 255, 255);
+  width: 90%; 
+} 
+#frame .content .message-input .wrap  { 
+  border: 2px solid rgb(87, 87, 87); 
+  border-radius: 20px;  
+  margin-bottom: 15px;
+}      
+#frame .content .message-input .wrap input {
+  font-family: "proxima-nova",  "Source Sans Pro", sans-serif; 
+  border: none;   
+  background: transparent;
+  font-size: 1.5rem;
+  padding: 8px;
+  text-indent: 5px;
+  width: 80%; 
+  outline: none;
+  border: none;
+}      
+#frame .content .message-input .wrap input:focus { 
+  border: none !important;
+}      
+#frame .content .message-input .wrap button { 
+  border-left: 2px solid rgb(97, 97, 97) !important;    
+  border: none; 
+  padding: 8px; 
+  font-size: 1.5rem;
+  height: 49px;
+  background: transparent;
+  float: right;
+  outline: none;
+}      
+</style>
+</head>
+<body>
+ 
+<p class="logo">KDT Project Group Chat</p>  
+<div id="frame" class="messages">
+	<div class="content"> 
+		<div class="messages" id="chatBox">
+			<ul> 
+			</ul>
+		</div>
+		<div class="message-input">
+			<div class="wrap">
+			<input type="text" placeholder="Write your message..." />
+			<button class="submit">send</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script>
+
+  $(".messages").animate({ scrollTop: $(document).height() }, "fast");
+  var user_id;
+
+  function newMessage() {
+    
+    message = $(".message-input input").val();
+    if($.trim(message) == '') {
+      return false;
+    }
+    writeUserData(message);
+  };
+
+  $('.submit').click(function() {
+    newMessage();
+  });
+
+  $(window).on('keydown', function(e) {
+
+    if (e.which == 13) {
+      newMessage();
+      return false;
+    }
+  });
+</script>
+
+<!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase.js"></script> 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script> 
+<script>
+    var fconfig = {
+                apiKey: "AIzaSyDc5timuQtu7Y4ZxFHafV-NTwT4sU29u8w",
+                authDomain: "kdt-143.firebaseapp.com",
+                databaseURL: "https://kdt-143-default-rtdb.firebaseio.com",
+                projectId: "kdt-143",
+                storageBucket: "kdt-143.appspot.com",
+                messagingSenderId: "559265165592"
+            };
+
+            firebase.initializeApp(fconfig);
+
+    var user = firebase.auth().signInAnonymously();
+    var user_id;
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        // User is signed in.
+        var isAnonymous = user.isAnonymous;
+        user_id = user.uid;
+      } else {
+        // User is signed out.
+      }
+    }); 
+  
+  // get firebase database reference...
+
+  var db_ref = firebase.database().ref('chat');
+
+  db_ref.on('child_added', function (data) {
+    var type;
+    if(data.val().user_id == user_id){
+      type="sent";
+    }
+    else{
+      type="repleis";
+    }
+    $('<li class="'+type+'"><p>' + data.val().message + '</p></li>').appendTo($('.messages ul'));
+    $('.message-input input').val(null);
+    $('.contact.active .preview').html('<span>You: </span>' + data.val().message);
+
+      $(".messages").animate({ scrollTop: $(".messages")[0].scrollHeight }, 0);
+  });
+
+  function writeUserData(message) {
+
+      db_ref.push({
+          user_id: user_id,
+          message: message
+      });
+  }
+
+
+
+   
+    setInterval(function(){
+    swal({
+        title: "Going to Home Page", 
+        icon: "warning",
+        buttons: true, 
+        dangerMode: false,
+      })
+      .then((willDelete) => {
+        if (willDelete) { 
+            window.location.href="/";
+        } else {
+        //   swal("Your are not want chat with kdt");
+        }
+      }); 
+   }, 60000);
+
+
+</script>
+
+
+
+</body></html> 

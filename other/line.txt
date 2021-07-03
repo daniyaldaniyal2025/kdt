@@ -1,0 +1,63 @@
+#define int1 10
+#define int2 9
+#define int3 6
+#define int4 5 
+#define speaker 3
+#define vcc_ir 4
+#define left_ir A0
+#define right_ir A1 
+char data;   
+
+void setup() {
+  pinMode(int1, OUTPUT);
+  pinMode(int2, OUTPUT);
+  pinMode(int3, OUTPUT);
+  pinMode(int4, OUTPUT);    
+  pinMode(vcc_ir, OUTPUT);      //speaker for horn
+  pinMode(left_ir, INPUT);       // initialize Left sensor as an input
+  pinMode(right_ir, INPUT);      // initialize Right sensor as an inp 
+  Serial.begin(9600);            //Set the baud rate to your Bluetooth module.
+}
+  
+void loop() {
+if(Serial.available()){
+  data = Serial.read();
+  Serial.println(data);
+}  
+digitalWrite(vcc_ir,1); 
+   
+  int LEFT_SENSOR = digitalRead(left_ir);
+  Serial.println("LEFT_SENSOR: "  +LEFT_SENSOR);
+  int RIGHT_SENSOR = digitalRead(right_ir); 
+  Serial.println("RIGHT_SENSOR: " + RIGHT_SENSOR);
+    
+  if(RIGHT_SENSOR==0 && LEFT_SENSOR==0) {
+    analogWrite(int1,100);
+    analogWrite(int2,0);
+    analogWrite(int3,100);       //FORWARD
+    analogWrite(int4,0); 
+  }
+  
+    else if(RIGHT_SENSOR==0 && LEFT_SENSOR==1) {
+    analogWrite(int1,150);
+    analogWrite(int4,150);     //Move left 
+    digitalWrite(int2,LOW);
+    digitalWrite(int3,LOW);
+  }
+  
+    else if(RIGHT_SENSOR==1 && LEFT_SENSOR==0) {
+    analogWrite(int3,150);
+    analogWrite(int2,150);     //Move right 
+    digitalWrite(int1,LOW);
+    digitalWrite(int4,LOW);
+  }
+  
+    else if(RIGHT_SENSOR==1 && LEFT_SENSOR==1) {
+    analogWrite(int1,0); 
+    analogWrite(int2,0); 
+    analogWrite(int3,0); 
+    analogWrite(int4,0);   
+  }
+
+} 
+ 

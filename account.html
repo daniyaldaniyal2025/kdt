@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="rgb(214, 218, 215)">
+  <meta property="og:locale" content="en-EN">
+  <meta property="og:locale:alternate" content="nl-NL">
+  <meta property="og:locale:alternate" content="de-DE">
+  <meta property="og:locale:alternate" content="fr-FR">
+  <meta name='robots' content='index,follow' />
+  <meta name="msapplication-TileColor" content="rgb(214, 218, 215)">
+  <title> KDT User's Home Page </title>
+  <!-- title image favicon  -->
+  <link rel="shortcut icon" href="media/image/kdt.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- manually style sheet  -->
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- dark mode access style sheet  -->
+  <link rel="stylesheet" href="css/dark.css">
+  <link rel="stylesheet" id="style">
+  <script data-ad-client="ca-pub-6756064500884612" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <style>
+    #main_div {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    .nav_background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 90%;
+      width: 90%;
+      z-index: -1;
+      -webkit-clip-path: circle(90vh at 80% -2vh);
+      clip-path: circle(90vh at 80% -2vh);
+      background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#888888));
+      background: linear-gradient(to bottom, transparent, #888888);
+      transform-origin: right top;
+      transition: all .1s ease;
+    }
+
+    .nav_hamburger_background {
+      position: fixed;
+      top: 5px;
+      right: 5px;
+      height: 90px;
+      width: 100px;
+      background: var(--radial-gradient);
+      z-index: -2;
+      display: none;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      -webkit-transform-origin: right top;
+      transform-origin: right top;
+      -webkit-transition: -webkit-transform .5s ease;
+      transition: -webkit-transform .5s ease;
+      transition: transform .5s ease;
+      transition: transform .5s ease, -webkit-transform .5s ease;
+      border-radius: 62% 10% 49% 100% / 68% 47% 44% 90%;
+    }
+
+    .nav_hamburger_background.show {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+
+    .body_content_header .header_top {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    img.nav_background_img {
+      margin-right: 9rem;
+      margin-top: 9rem;
+      height: 350px;
+      z-index: -3;
+    }
+
+    .about-me {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      min-width: 400px;
+      padding: 3rem 0rem;
+    }
+
+    h3 {
+      font-size: 1.3rem !important;
+      font-weight: 400;
+      padding: 5%;
+      background: -webkit-gradient(linear, left top, left bottom, from(#0355f8), to(white)) !important;
+      background: linear-gradient(#0355f8, white);
+      color: transparent !important;
+      -webkit-text-stroke: 1px #797979;
+      -webkit-background-clip: text !important;
+      -webkit-background-clip: text !important;
+      font-family: 'Short Stack' !important;
+    }
+
+
+    button {
+      font-size: 15px;
+      padding: 5px 10px;
+      margin: 5px;
+      border: none;
+      outline: none;
+      border-radius: 5px !important;
+      -webkit-box-shadow: var(--box-shadow);
+      box-shadow: var(--box-shadow);
+      -webkit-transition: all .3s easy;
+      transition: all .3s easy;
+    }
+
+    a {
+      color: #555555;
+      text-decoration: none;
+    }
+
+    button:hover {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background: var(--radial-gradient);
+    }
+
+    .show_user {
+      margin: 30px 5%;
+    }
+
+    table {
+      display: block;
+      margin: 0px auto;
+      max-height: 600px;
+      overflow: auto;
+    }
+
+    .thead {
+      background: var(--radial-gradient) !important;
+      padding: 0 !important;
+    }
+
+    @media (max-width: 700px) {
+      .nav_hamburger_background {
+        display: block;
+      }
+
+      .nav_background {
+        width: 99%;
+        -webkit-clip-path: circle(70vh at 90% -25vh);
+        clip-path: circle(70vh at 90% -25vh);
+      }
+
+      img.nav_background_img {
+        display: block;
+        width: 70%;
+        margin: auto;
+      }
+
+      .body_content_header .header_top {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    @media (max-width: 1000px) and (min-width: 700px) {
+      .nav_background {
+        width: 85%;
+        -webkit-clip-path: circle(90vh at 135% -10%);
+        clip-path: circle(90vh at 135% -10%);
+      }
+
+      img.nav_background_img {
+        margin-top: 80%;
+        height: 200px;
+      }
+
+      .about-me {
+        top: -50px;
+        left: 130px;
+      }
+    }
+
+    @media (max-width: 1300px) and (min-width: 1000px) {
+      .nav_background {
+        width: 99vw;
+        -webkit-clip-path: circle(90vh at 85% -5%);
+        clip-path: circle(90vh at 85% -5%);
+      }
+
+      img.nav_background_img {
+        margin-right: 5rem;
+        height: 250px;
+      }
+    }
+
+
+    /* comment part  */
+
+
+    .comment {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 50px;
+      width: 100%;
+    }
+
+    .comment input {
+      font-size: 20px;
+      padding: 10px;
+      border: 2px solid gray;
+      border-top-right-radius: 0px !important;
+      border-bottom-right-radius: 0px !important;
+      border-radius: 10px;
+      background: transparent;
+    }
+
+    .comment input:focus {
+      -webkit-box-shadow: var(--box-shadow);
+      box-shadow: var(--box-shadow);
+    }
+
+    .comment {
+      min-width: 90%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 5px 20px;
+      margin: 5px;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      -webkit-box-shadow: var(--box-shadow);
+      box-shadow: var(--box-shadow);
+      -webkit-transition: all .3s easy;
+      transition: all .3s easy;
+    }
+
+    .comment input[type="submit"] {
+      background: var(--radial-gradient);
+      -webkit-box-shadow: var(--box-shadow);
+      box-shadow: var(--box-shadow);
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-top-right-radius: 10px !important;
+      border-bottom-right-radius: 10px !important;
+    }
+
+
+
+    /* show comment  */
+
+    .comment_show {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+
+    .comment_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 5px 5%;
+      border-bottom: 1px solid var(--text-color);
+      padding: 10px;
+    }
+
+    .comment_header .right {
+      height: 40px;
+      width: 40px;
+      border: 2px solid var(--text-color);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      position: relative;
+
+    }
+
+    .comment_header .right svg {
+      position: absolute;
+      width: 60%;
+      height: 60%;
+      fill: var(--text-color);
+    }
+
+    .comment_body {
+      margin: 5px 10%;
+      display: flex;
+    }
+
+    .comment_logo {
+      height: 40px;
+      width: 40px;
+      border: 2px solid var(--text-color);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      position: relative;
+      margin-top: 10px;
+    }
+
+    .comment_logo svg {
+      position: absolute;
+      width: 60%;
+      height: 60%;
+      fill: var(--text-color);
+    }
+
+    .comment_box {
+      transform: translateX(20px);
+      padding: 10px;
+    }
+
+    .comment_box p {
+      word-break: break-all;
+    }
+  </style>
+
+</head>
+
+
+
+<body id="cssChange">
+  <div id="main_div">
+
+    <div class="header">
+
+      <!-- preloader  -->
+      <div class="preloader">
+        <span><b>0</b>%</span>
+        <p>Loading<b>.</b><b>.</b><b>.</b></p>
+      </div>
+
+      <!-- navigation seceion  -->
+      <nav>
+        <div class="navigation">
+          <div class="logo">
+            <h1>KD<span>TA</span></h1>
+          </div>
+
+          <div class="navbar">
+            <ul>
+              <li><a href="/">Home </a></li>
+              <li><a href="project.html">Project</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="other.html">Other</a></li>
+            </ul>
+          </div>
+          <div class="hamburger"></div>
+        </div>
+        <div class="menu_background1"></div>
+        <div class="menu_background2"></div>
+      </nav>
+      <header>
+        <section>
+          <div class="body_content_header">
+            <div class="nav_background"></div>
+            <div class="nav_hamburger_background"></div>
+
+            <div class="header_top">
+              <div class="about-me">
+                <h3> <span style="font-size: 1.7rem;" onclick="showConfig()">Congratulations!!!!!!! </span> <br>
+                  you are available to my website. <br><br>
+                  Authentication is the process of determining if the request has come from a valid
+                  user who has the required privileges to use the system. In the world of computer
+                  networking this is a very vital requirement as many systems keep interacting with
+                  each other and proper mechanism needs to ensure that only valid interactions happen
+                  between these programs.
+                  <br><br>
+                </h3>
+              </div>
+              <div class="header_img">
+                <img class="nav_background_img" src="media/image/undraw_smart_home_28oy.svg" alt="header image">
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+
+          <h3>
+            <span> Comment </span> <br>
+            Thank you to everyone who responded to this web, I hope you liked my webpage if it's
+            really then please added many suggestions for great commenting platform else dislike this or
+            send feedback to mail. <br> <br>
+            The comments you are leaving are building your reputation.
+            Make it a good one that shows you are knowledgeable and
+            even-handed, instead of a disagreeable jerk with little to
+            add to the conversation.
+            <br>
+            Make sure write your name in comment box plzzzzzzzzzzz!
+
+            <br><br>
+            <div class="comment">
+              <input type="text" autocomplete="off" id="comment" placeholder="Type Your Comment">
+              <input type="submit" id="cmt_btn" onclick="send_comment_function()" value="commit">
+              <input type="hidden" id="comment_datetime">
+            </div>
+
+
+
+            <div class="comment_show" style="font-size: 20px !important;">
+              <div class="comment_header">
+
+                <div class="left">
+                  <h3>
+                    <p id="num_of_cmt">comment's</p>
+                  </h3>
+                </div>
+
+
+                <div class="right">
+                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.867 477.867"
+                    style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+                    <g>
+                      <g>
+                        <path d="M426.667,0.002H51.2C22.923,0.002,0,22.925,0,51.202v273.067c0,28.277,22.923,51.2,51.2,51.2h60.587l-9.284,83.456
+	c-1.035,9.369,5.721,17.802,15.09,18.837c4.838,0.534,9.674-1.023,13.292-4.279l108.919-98.014h186.863
+	c28.277,0,51.2-22.923,51.2-51.2V51.202C477.867,22.925,454.944,0.002,426.667,0.002z M443.733,324.269
+	c0,9.426-7.641,17.067-17.067,17.067H233.25c-4.217,0.001-8.284,1.564-11.418,4.386l-80.452,72.414l6.434-57.839
+	c1.046-9.367-5.699-17.809-15.067-18.856c-0.63-0.07-1.263-0.106-1.897-0.105H51.2c-9.426,0-17.067-7.641-17.067-17.067V51.202
+	c0-9.426,7.641-17.067,17.067-17.067h375.467c9.426,0,17.067,7.641,17.067,17.067V324.269z" />
+                      </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                  </svg>
+
+                </div>
+              </div>
+
+              <ol id="show_comment" style="font-size: 20px !important;">
+                <li id="comment_body" class="comment_body">
+                  <div class="comment_logo">
+                    <i class="fa fa-2x fa-user" style="color: var(--text-color);"></i>
+                  </div>
+                  <div class="comment_box">
+                    <p>
+                      <i style="color: var(--text-color);"> KDT </i>
+                    </p>
+                    <p id="show_name">When you will commenting on my page then show all comments from my database
+                      otherwise not show any comments</p><br>
+                    <p><b><a> Thanks for visit my web </a></b></p>
+                  </div>
+                </li>
+              </ol>
+          </h3>
+
+
+
+
+
+        </section>
+      </header>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/time.js"></script>
+
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+  <script>
+
+
+    document.getElementById("comment").addEventListener("keyup", function (e) {
+
+      if (e.keyCode === 13) {
+        e.preventDefault();
+        document.getElementById("cmt_btn").click();
+      }
+    });
+
+    var count = 10;
+    function send_comment_function() {
+      count--;
+
+      if (count <= 8) {
+        swal("Sorry !!!!", "Only One Comment allowed.", "warning");
+      } else {
+        swal("Success", "", "success");
+      }
+
+      var fconfig = {
+        apiKey: "AIzaSyDc5timuQtu7Y4ZxFHafV-NTwT4sU29u8w",
+        authDomain: "kdt-143.firebaseapp.com",
+        databaseURL: "https://kdt-143-default-rtdb.firebaseio.com",
+        projectId: "kdt-143",
+        storageBucket: "kdt-143.appspot.com",
+        messagingSenderId: "559265165592"
+      };
+
+      firebase.initializeApp(fconfig);
+      var comment = document.getElementById("comment").value;
+      var date = document.getElementById("comment_datetime").value;
+      var name = "Unknown";
+
+      if ((/^[0-9A-Za-z .]{0,}(kamleen)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Mohd Kamleen";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(kdt-143)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "KDT";
+        comment = "Thanks to all of you";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(tab)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Mohd Tabish";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(daniyal)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Daniyal Ansari";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(abhijeet)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Abhijeet Mishra";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(abrar)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Mohd Abrar";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(irfan)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Mohd Irfan";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(ankur)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Ankur Kori";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(susil)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Susil Bhai ";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(badal)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Badal Bhai";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(anwar)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Anwar Ansari";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(chandan)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Chandan Panday";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(abid)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Abid Ali";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(mannu)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Mannu Mishra";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(shivani)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Shivani";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(priyansi)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Priyanshi";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(radha)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Radha";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(anchal)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Anchal Yadav";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(yuraj)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Yuraj";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(shivam)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Shivam Bhai";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(prins)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Prins Bhai";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(rajnees)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Rajnis Bhai";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(sagar)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Abid";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(Sagar Bhai)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Abid";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(rahul)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Rahul Bhai";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(neda)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Neda";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(krishna)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Krishna Bhai";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(sobhna)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Sobhna Gpta";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(sivangi)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Shivangi Pal";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(bhavesh)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Bhavesh Bhai";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(anupam)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Anupam Bhai";
+      }
+      if ((/^[0-9A-Za-z .]{0,}(sohit)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+        name = "Sohit Bhai";
+      }
+
+
+
+
+      firebase.database().ref('accountComment').push({
+        "comment": comment,
+        "name": name,
+        "date": date
+      });
+
+
+      firebase.database().ref('accountComment').once('value', function (snapshot) {
+        document.getElementById("num_of_cmt").innerText = snapshot.numChildren() + 1 + "comment's";
+        snapshot.forEach(function (childSnapshot) {
+          var childData = childSnapshot.val();
+          document.getElementById("show_comment").innerHTML += `
+									<li id="comment_body" class="comment_body">
+										<div class="comment_logo">
+											<i class="fa fa-2x fa-user" style="color: var(--text-color);"></i>
+											</div>
+										<div class="comment_box">
+											<p> 
+												<b style="color: var(--text-color);"> ${childData.name} </b>
+												<i style="color: var(--text-color);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${childData.date} </i>
+											</p>
+											<p id="show_name"> ${childData.comment} </p><br>
+											<p><b><a href="#comment"> reply </a></b></p>
+										</div>
+									</li>`;
+        });
+      });
+    }
+
+
+
+    //       function showConfig(){
+    //         const remoteConfig = firebase.remoteConfig();
+    // remoteConfig.settings.minimumFetchIntervalMillis = 3600000;
+    // remoteConfig.defaultConfig = {
+    //     "welcome_message": "Welcome"
+    //   };
+      // const val = remoteConfig.getValue("welcome_messsage");
+
+      
+
+
+      //   remoteConfig.fetchAndActivate().then((e) => {
+      //       alert(e);
+      //     })
+      //     .catch((err) => {
+      //       // ...   
+      //     });
+
+ 
+      //     alert("e");
+      // }
+
+  </script>
+
+</body>
+
+</html>

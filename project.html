@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="rgb(214, 218, 215)">
+    <meta name="Keywords" content="KDT Project, SRS, IOT">
+    <meta name="Description" content="this is srs of our project ">
+    <meta property="og:logo" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="kdt">
+    <meta property="og:locale" content="en-EN">
+    <meta property="og:locale:alternate" content="nl-NL">
+    <meta property="og:locale:alternate" content="de-DE">
+    <meta property="og:locale:alternate" content="fr-FR">
+    <meta name='robots' content='index,follow' />
+    <meta name="msapplication-TileColor" content="rgb(214, 218, 215)">
+    <title>KDT Project | Project </title>
+    <!-- title image favicon  -->
+    <link rel="shortcut icon" href="media/image/kdt.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- manually style sheet  -->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" id="style">
+    <!-- dark mode access style sheet  -->
+    <link rel="stylesheet" href="css/dark.css">
+
+    <script data-ad-client="ca-pub-6756064500884612" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+
+<body>
+    <div id="main_div">
+
+        <div class="header">
+
+            <!-- preloader  -->
+            <div class="preloader">
+                <span><b>0</b>%</span>
+                <p>Loading<b>.</b><b>.</b><b>.</b></p>
+            </div>
+
+            <!-- navigation seceion  -->
+            <nav>
+                <div class="navigation">
+                    <div class="logo">
+                        <h1>KD<span>TA</span></h1>
+                    </div>
+
+                    <div class="navbar">
+                        <ul>
+                            <li><a href="/">Home </a></li>
+                            <li><a class="active">Project</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="other.html">Other</a></li>
+                        </ul>
+                    </div>
+                    <div class="hamburger"></div>
+                </div>
+                <div class="menu_background1"></div>
+                <div class="menu_background2"></div>
+            </nav>
+
+            <header>
+                <section>
+                    <div class="body_content_header">
+                        <div class="nav_background"></div>
+                        <div class="nav_hamburger_background"></div> 
+                        <div class="header_top">
+                            <div class="about-me">
+                                <h3>
+                                    Hey guys, here in this project i have tried to make a Bluetooth controlled car
+                                    with the help of Arduino. I have included each detail so you can understand it
+                                    easily. Also you can read the blog which is more detailed.
+                                    <br> <br>
+                                    &nbsp; &nbsp; &nbsp;I have added every circuit diagram and explanation possible to
+                                    make it easy for you all to understand. <br><br>
+                                    <button class="win_sh"><a href="other/ppt.pdf">Show PPT</a></button>
+                                    <button><a href="other/ppt.pptx" download="arduinoCar">Download PPT</a></button>
+                                </h3>
+                            </div>
+                            <div class="header_img">
+                                <img class="nav_background_img" src="media/image/undraw_Mind_map_re_nlb6.svg"
+                                    alt="header image">
+                            </div>
+                        </div>
+
+                        <h3>
+                            <!--work of project-->
+                            <span>1. Project Work </span> <br>
+                            This car is work based on two model. <br><br>
+                            <span>* Blutooth Controlled </span> <br>
+                            Bluetooth module has two modes one is master mode and second one is slave mode. User can set
+                            either mode by using some AT commands. Even user can set module’s setting by using AT
+                            command. Here is some commands uses are given:<br><br>
+                            Press Forword button: Car moves forward. ( all wheels start moving forward ) <br><br>
+                            Press Back button: Car moves in reverse. ( all wheels start moving backward ) <br><br>
+                            Press Left button: Car turns to left side. ( Only right wheels move forword left move
+                            reverse) <br><br>
+                            Press Right button: Car turns to right side. ( Only left wheels move forward right move
+                            reverse)<br><br>
+                            When all buttons press then car will going to line following. this button sending data to
+                            blutooth module
+                            and this module send to Arduino Board then board take action accordng from user <br>
+
+                            <div class="header_img">
+                                <img class="comp_img" src="media/image/blutooth_img_giagram.png">
+                            </div>
+
+                            <span>* Line Follower </span> <br>
+                            The concept of working of line follower is related to light. We use here the behavior of
+                            light at the black and white surfaces. When light falls on a white surface it is almost
+                            fully reflected and in the case of a black surface light is completely absorbed. This
+                            behavior of light is used in building a line follower robot. <br>
+
+                            <div class="header_img">
+                                <img class="comp_img" src="media/image/line+follow_digramme.gif">
+                            </div>
+
+                        </h3>
+
+                        <h3>
+                            <!--components-->
+                            <span>2. Components </span> <br>
+                            All components are required. <br>
+
+                            <button><a
+                                    href="https://www.firstcry.com/centy/centy-innova-cristiano-20-pull-back-car-red/3118320/product-detail?ref2=pd_of_b">Toy
+                                    Car</a></button><br>
+                            <button><a
+                                    href="https://www.roboelements.com/product/arduino-uno-r3-smd-atmega328p-development-board/">Arduino
+                                    UNO with Cable</a></button><br>
+                            <button><a
+                                    href="https://www.roboelements.com/product/hc05-bluetooth-transceiver-module-with-ttl-output/">Bluetooth
+                                    Module</a></button><br>
+                            <button><a
+                                    href="https://www.roboelements.com/product/100-rpm-bo-motor-plastic-geared-dc-motor-shaped/">Gear
+                                    Motor</a></button><br>
+                            <button><a
+                                    href="https://www.roboelements.com/product/l298n-motor-driver-controller-module-dual-h-bridge-motor-driver/">Motor
+                                    Driver</a></button><br>
+                            <button><a
+                                    href="https://www.electronicscomp.com/tracked-wheel-for-bo-motor-yellow-26mm-india?search=wheel">Motor
+                                    Wheels</a></button><br>
+                            <button><a
+                                    href="https://www.roboelements.com/product/dupont-jumper-wires-3-types-each-pack-of-40/">Jumper
+                                    Wires</a></button><br>
+                            <button><a
+                                    href="https://www.roboelements.com/product/12v-2200-mah-lithium-ion-3-cell-li-ion-rechargeable-battery/">Battery</a></button><br>
+                            <button><a
+                                    href="https://www.roboelements.com/product/5-colour-led-pack-colour-led-10-pieces/">Some
+                                    Led</a></button><br>
+                            <button><a
+                                    href="https://www.roboelements.com/product/proximity-infrared-sensor-module-obstacle-detector-ir-sensor-arduino/">IR
+                                    Sensors</a></button><br>
+                            <button><a
+                                    href="https://www.electronicscomp.com/ttp223-1-channel-capacitive-touch-sensor-module-red-color?search=touch&page=2">Touch
+                                    Sensors</a></button><br>
+                            <button><a href="https://www.electronicscomp.com/ldr-12mm?search=ldr">LDR
+                                    Sensors</a></button><br>
+                            <button><a
+                                    href="https://www.roboelements.com/product/hc-sr501-pir-sensor-motion-detector-sensor-passive-infrared-module/">PIR
+                                    Sensors</a></button><br>
+                            <button><a
+                                    href="https://www.amazon.in/Locking-Switch-Tactile-Electronics-Accessories/dp/B07MTGJVJ7/ref=asc_df_B07MTGJVJ7/?tag=googleshopdes-21&linkCode=df0&hvadid=396986702580&hvpos=&hvnetw=g&hvrand=6798989478752132675&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=20471&hvtargid=pla-835743632580&psc=1&ext_vrnc=hi">Switch
+                                    Sensor</a></button><br>
+                            <button><a
+                                    href="https://www.electronicscomp.com/piezo-buzzer?search=buzzer">Speaker</a></button><br>
+                            <button><a
+                                    href="https://www.roboelements.com/product/500pc-1n4007-diode-1-amp-wholesale-pack/">Bridge
+                                    Rectifier</a></button><br>
+                            <button><a
+                                    href="https://robu.in/product/high-quality-22awg-silicone-wire-10m-red/?gclid=Cj0KCQiApY6BBhCsARIsAOI_GjauncajQEUFdheDqBmrmLvMeVYq9d6TVKS85cKOKPuslsgnPSJgC7QaArHsEALw_wcB">Simple
+                                    Wires</a></button><br>
+                            <button><a href="https://www.roboelements.com/product-category/pcb-and-solder/">Electrical
+                                    instruments</a></button><br>
+                            <button><a
+                                    href="https://play.google.com/store/apps/details?id=braulio.calle.bluetoothRCcontroller">Bluetooth
+                                    Controller App </a></button><br>
+                            <button><a
+                                    href="https://www.amazon.in/New-Apple-iPhone-Pro-128GB/dp/B08L5WS5JB/ref=asc_df_B08L5WS5JB/?tag=googleshopdes-21&linkCode=df0&hvadid=397081325912&hvpos=&hvnetw=g&hvrand=13097746995061110051&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=20471&hvtargid=pla-1013138779896&psc=1&ext_vrnc=hi">Android
+                                    device</a></button><br>
+                            <button><a href="https://www.arduino.cc/en/software">Arduino IDE</a></button><br>
+                        </h3>
+
+                        <h3>
+                            <!--Work Of Components-->
+
+                            <span>3. Work Of Components </span> <br>
+                            All parts word diffrent diffrent something like this. <br><br>
+
+                            <span>* Toy Car </span> <br>
+                            It's for design car and setup all parts.
+                            <br><br>
+
+                            <span>* Arduino Board </span> <br>
+                            The Arduino software is used to build the code for every project made using any Arduino
+                            boards; it mostly uses the C/C++ language for its coding. Once the code is ready, we have to
+                            just compile and upload it on the board to make our project work. There are many types of
+                            Arduino boards like Arduino Uno, Arduino Nano, Arduino USB, etc. In this project, we are
+                            going to use the Arduino UNO board (Atmega 328p). <br><br>
+
+                            <span>* Bluetooth Module </span> <br>
+                            HC Bluetooth module consists two things one is Bluetooth serial interface module and a
+                            Bluetooth adaptor. Bluetooth serial module is used for converting serial port to Bluetooth.
+                            <br><br>
+
+                            <span>* Gear Motor </span> <br>
+                            We have used two geared motors at the rear of the line follower robot. These motors provide
+                            more torque than normal motors and can be used for carrying some load as well. <br><br>
+
+                            <span>* Motor Driver </span> <br>
+                            The L298N Motor Driver Module is responsible for providing the necessary drive current to
+                            the motors of the robotic car. I have provided information about L298N Module in an earlier
+                            project called Arduino DC Motor Control using L298N. <br><br>
+
+                            <span>* Motor Wheels </span> <br>
+                            wheels used for car moving and simply its work. <br><br>
+
+                            <span>* Jumper Wires </span> <br>
+                            Jumper wires are simply wires that have connector pins at each end, allowing them to be used
+                            to connect two points to each other without soldering. Jumper wires are typically used with
+                            breadboards and other prototyping tools in order to make it easy to change a circuit as
+                            needed. Fairly simple. In fact, it doesn’t get much more basic than jumper wires.
+                            It is 3 type male to male, female to female, female to male<br><br>
+
+                            <span>* Battery </span> <br>
+                            Battery is one of the most important thing in this project ! It's use for current in circuit
+                            I use 3.7v battery 4pcs when these are connected to serise conection then its work base on
+                            14.8v and
+                            this power user in motor driver and arduino.
+                            <br><br>
+
+                            <span>* LED </span> <br>
+                            In this project led used for light as front light, back light, left light etc. <br><br>
+
+                            <span>* IR Sensor </span> <br>
+                            It's used for line follower black object detection. Its's not working black surface and sun
+                            light <br><br>
+
+                            <span>* Touch Sensor </span> <br>
+                            It's used for light connection toggle on and off in arduino. <br><br>
+
+                            <span>* LDR Sensor </span> <br>
+                            It's used for known brightness like day or night. <br><br>
+
+                            <span>* PIR Sensor </span> <br>
+                            PIR sensors are most commonly used in motion-based detection, such as in-home security
+                            systems. When a moving object that generates infrared radiation enters the sensing range of
+                            the detector, the difference in IR levels between the two pyroelectric elements is measured.
+                            The sensor then sends an electronic signal to an embedded computer, which in turn triggers
+                            an alarm. <br><br>
+
+                            <span>* Switch Sensor </span> <br>
+                            It's used for light connection toggle on and off in main circuit. <br><br>
+
+                            <span>* Speaker </span> <br>
+                            It's used for horn when car will going to reverse then its work. <br><br>
+
+                            <span>* Bridge Rectifier </span> <br>
+                            When battery will going to die then cahrging battery from bridge rectifeir <br><br>
+
+                            <span>* Simple Wires </span> <br>
+                            Simple Wires are used to bear mechanical loads or electricity and telecommunications
+                            signals and connectoins for motor and battery etc.<br><br>
+
+                            <span>* Electrical instruments</span> <br>
+                            Electrical instruments are instruments that use the mechanical movement of electromagnetic
+                            meter to measure voltage, power, current… Electrical technicians require electrical
+                            measurement equipment to check the electrical activity and to detect the presence of voltage
+                            or current. By using this instrument we can measure electrical parameters such as voltage,
+                            frequency, current, power factor, and resistance. Electrical measurements are depended upon
+                            either current or voltage while measuring the frequency we will be measuring the frequency
+                            of a current signal or a voltage signal.<br><br>
+
+                            <span>* Bluetooth Controller App</span> <br>
+                            After installing app you need to open it and then search Bluetooth device and select desired
+                            Bluetooth device. And then configure keys. Here in this project we have used Bluetooth
+                            controller app.<br><br>
+
+                            <span>* Android device</span> <br>
+                            It's used for handling car from blutooth car app <br><br>
+
+                            <span>* Arduino IDE</span> <br>
+                            The open-source Arduino Software (IDE) makes it easy to write code and upload it to the
+                            board. This software can be used with any Arduino board. <br><br>
+
+
+                        </h3>
+
+                        <h3>
+                            <!--Connections of Components-->
+
+                            <span>4. Connections of Components </span> <br>
+                            <span>* Setup Connection</span> <br>
+                            In this connection is only simply like joining all part to toy car. <br>
+                            <button> Toy Car connection </button><br>
+                            <button> Motor connection </button><br>
+                            <button> Motor Wheels connection </button><br>
+                            <button> LED connection </button><br>
+                            <button> Motor Driver </button><br>
+                            <button> Arduino Board </button><br>
+                            <button> Battery </button><br>
+                            <button> Sensor(IR, PIR, LDR, Touch) connection </button><br><br>
+
+                            <div class="header_img">
+                                <img class="comp_img" src="media/image/diagrm_blutooth_car_rZWd4IWiDQ.png">
+                            </div> <br>
+
+                            <span>* Pin or Physically Connection</span> <br>
+                            Here, I want to tell one important point that, The code that will be given should be
+                            uploaded before connection of the pins; else you will face an error in uploading the code,
+                            so, just first copy the code provided below and pasted in the Arduino software and upload it
+                            to the board before the pin connections. <br>
+                            <button> Motor connection into Arduino </button><br>
+                            <button> Motor Wheels connection </button><br>
+                            <button> LED connection </button><br>
+                            <button> Motor Driver </button><br>
+                            <button> Arduino Board </button><br>
+                            <button> Sensor(IR, PIR, LDR, Touch) connection </button><br><br>
+
+                            <div class="header_img">
+                                <img class="comp_img" src="media/image/Bluetooth-controlled-car-circuit.png">
+                            </div><br>
+                            <div class="header_img">
+                                <img class="comp_img" src="media/image/Arduino-Line-Follower-Robot-Circuit.jpg">
+                            </div><br>
+
+                            <span>* Power Connection</span> <br>
+                            In this connection is electrical connection for battery and his charge and bridge rectifeir
+                            connection. <br>
+                            <button> Diode </button><br>
+                            <button> Condensor </button><br>
+                            <button> battery </button><br>
+                            <button> Register </button><br>
+                            <button> pcb-and-solder </button><br><br>
+
+                            <div class="header_img">
+                                <img class="comp_img" src="media/image/bridge_rectifeir.gif">
+                            </div>
+                        </h3>
+
+                        <h3>
+                            <span>5. Coding </span> <br>
+
+                            &nbsp;&nbsp;&nbsp;In this coding part is three division first one <br> <br>
+                            <span>* Arduino Code </span><br>
+                            First install the Arduino software. Installation instructions are very simple, you should
+                            not have any trouble with this step. <br>
+                            The code at the master device, or the joystick is quite simple. We just need to read the X
+                            and Y values of the joystick, which actually regulate the speed of the motors, and send them
+                            via the serial port to the slave HC-05 Bluetooth device. We can note here that the analog
+                            values of joystick from 0 to 1023 are converted into a values from 0 to 255 by diving them
+                            by 4.<br><br>
+
+                            <div
+                                style="width: 100%; height: 500px; overflow: auto; font-size: 20px; border: 2px solid var(--text-color);padding: 10px;">
+                                <pre>
+#define int1 10
+#define int2 9
+#define int3 6
+#define int4 5
+#define front_light 13
+#define left_light 12
+#define right_light 11
+#define main_light 8
+#define back_light 7
+#define speaker 3
+#define vcc_ir 4
+#define left_ir A0
+#define right_ir A1
+#define ldr A2
+char data;  
+int ldrVal;
+
+
+void setup() {
+  pinMode(int1, OUTPUT);
+  pinMode(int2, OUTPUT);
+  pinMode(int3, OUTPUT);
+  pinMode(int4, OUTPUT);   
+  pinMode(main_light, OUTPUT);   // main light (in car) 
+  pinMode(front_light, OUTPUT);  // front light 
+  pinMode(back_light, OUTPUT);   // back light 
+  pinMode(left_light, OUTPUT);   //side left light
+  pinMode(right_light, OUTPUT);  //side right light 
+  pinMode(speaker, OUTPUT);      //speaker for horn
+  pinMode(vcc_ir, OUTPUT);      //speaker for horn
+  pinMode(left_ir, INPUT);       // initialize Left sensor as an input
+  pinMode(right_ir, INPUT);      // initialize Right sensor as an input
+  pinMode(ldr, INPUT);           // initialize ldr sensor for brightness
+  Serial.begin(9600);            //Set the baud rate to your Bluetooth module.
+}
+  
+void loop() {
+if(Serial.available()){
+  data = Serial.read();
+  Serial.println(data);
+} 
+
+ldrVal = analogRead(ldr); 
+if(ldrVal <= 400){
+  digitalWrite(main_light,HIGH);
+  digitalWrite(front_light,HIGH);
+} else {
+  digitalWrite(main_light,LOW);
+  digitalWrite(front_light,LOW);
+}
+ 
+if(data == 'F'){                 //move forward 
+  digitalWrite(int1,HIGH);
+  digitalWrite(int3,HIGH);
+  digitalWrite(speaker,LOW);
+  digitalWrite(left_light,LOW);
+  digitalWrite(right_light,LOW);
+  digitalWrite(back_light,LOW);
+}
+ 
+else if(data == 'B'){            //move reverse  
+  digitalWrite(int2,HIGH);
+  digitalWrite(int4,HIGH);
+  digitalWrite(back_light,HIGH);
+  digitalWrite(speaker,HIGH);
+  digitalWrite(left_light,LOW);
+  digitalWrite(right_light,LOW);
+}
+ 
+else if(data == 'L'){            //turn left  
+  digitalWrite(int1,HIGH);
+  digitalWrite(int4,HIGH);  
+  digitalWrite(left_light,HIGH); 
+  digitalWrite(right_light,LOW); 
+}
+
+else if(data == 'G'){            //turn forword left  
+  digitalWrite(int1,HIGH); 
+  analogWrite(int3,100);
+  digitalWrite(left_light,HIGH);
+  digitalWrite(right_light,LOW); 
+} 
+
+else if(data == 'H'){           //turn back left  
+  digitalWrite(int2,HIGH);
+  analogWrite(int4,100);
+  digitalWrite(back_light,HIGH); 
+  analogWrite(speaker,100);
+  digitalWrite(left_light,HIGH);
+  digitalWrite(right_light,LOW); 
+}
+
+else if(data == 'J'){           //turn back right  
+  analogWrite(int2,100);
+  digitalWrite(int4,HIGH);
+  digitalWrite(back_light,HIGH);
+  analogWrite(speaker,100);
+  digitalWrite(right_light,HIGH);
+  digitalWrite(left_light,LOW);
+}
+
+else if(data == 'I'){           //turn forword right  
+  analogWrite(int1,100);
+  digitalWrite(int3,HIGH); 
+  digitalWrite(right_light,HIGH);
+  digitalWrite(left_light,LOW);
+}
+ 
+else if(data == 'R'){           //turn right 
+  digitalWrite(int3,HIGH);
+  digitalWrite(int2,HIGH);
+  digitalWrite(right_light,HIGH); 
+  digitalWrite(left_light,LOW);
+}
+  
+else if(data == 'W'){           //turn on front light 
+  digitalWrite(front_light,HIGH); 
+}
+  
+else if(data == 'w'){           //turn off front light
+  digitalWrite(front_light,LOW); 
+} 
+  
+else if(data == 'U'){           //turn on back light 
+  digitalWrite(back_light,HIGH); 
+}
+  
+else if(data == 'u'){           //turn off back light
+  digitalWrite(back_light,LOW); 
+}
+ 
+else if(data == 'V'){           //turn on horn
+  digitalWrite(speaker,HIGH); 
+}
+  
+else if(data == 'v'){           //turn off horn
+  digitalWrite(speaker,LOW); 
+}
+ 
+else if(data == 'S'){           //STOP (all motors stop) and on back light
+  digitalWrite(int1,LOW); 
+  digitalWrite(int2,LOW); 
+  digitalWrite(int3,LOW); 
+  digitalWrite(int4,LOW); 
+  digitalWrite(back_light,HIGH);
+  digitalWrite(left_light,LOW);
+  digitalWrite(right_light,LOW);
+  digitalWrite(speaker,LOW);
+} 
+
+else if(data == 'X'){         // this code for lane following 
+  digitalWrite(vcc_ir,HIGH);
+  int LEFT_SENSOR = digitalRead(left_ir);
+  int RIGHT_SENSOR = digitalRead(right_ir); 
+    
+  if(RIGHT_SENSOR==0 && LEFT_SENSOR==0) {
+    analogWrite(int1,100);
+    analogWrite(int2,0);
+    analogWrite(int3,100);       //FORWARD
+    analogWrite(int4,0);
+    digitalWrite(speaker,LOW);
+    digitalWrite(left_light,LOW);
+    digitalWrite(right_light,LOW);
+    digitalWrite(back_light,LOW);
+  }
+  
+    else if(RIGHT_SENSOR==0 && LEFT_SENSOR==1) {
+    analogWrite(int1,150);
+    analogWrite(int4,150);     //Move left
+    digitalWrite(left_light,HIGH); 
+    digitalWrite(right_light,LOW); 
+    digitalWrite(int2,LOW);
+    digitalWrite(int3,LOW);
+  }
+  
+    else if(RIGHT_SENSOR==1 && LEFT_SENSOR==0) {
+    analogWrite(int3,150);
+    analogWrite(int2,150);     //Move right
+    digitalWrite(right_light,HIGH); 
+    digitalWrite(left_light,LOW);
+    digitalWrite(int1,LOW);
+    digitalWrite(int4,LOW);
+  }
+  
+    else if(RIGHT_SENSOR==1 && LEFT_SENSOR==1) {
+    analogWrite(int1,0); 
+    analogWrite(int2,0); 
+    analogWrite(int3,0); 
+    analogWrite(int4,0);      //STOP
+    digitalWrite(back_light, HIGH); 
+    digitalWrite(left_light,LOW);
+    digitalWrite(right_light,LOW);
+    digitalWrite(speaker,LOW);
+  }
+
+} 
+
+else if(data =='x'){
+  digitalWrite(vcc_ir,LOW);
+  digitalWrite(int1,LOW); 
+  digitalWrite(int2,LOW); 
+  digitalWrite(int3,LOW); 
+  digitalWrite(int4,LOW); 
+  digitalWrite(back_light,HIGH);
+  digitalWrite(left_light,LOW);
+  digitalWrite(right_light,LOW);
+  digitalWrite(speaker,LOW);
+}
+}
+
+</pre>
+                            </div> <br>
+                            <button> <a href="other/car.txt" download="code">Download txt</a> </button>
+                            <button> <a href="other/car.ino">Download ino</a> </button>
+                            <button> <a href="other/car.html" download="code">Download html</a> </button><br> <br>
+
+                            <span>* Android App Code </span><br>
+                            Create a separate thread in your code to initiate a connection using the MAC Address that we
+                            previously obtained. This thread will manage what happens if a connection is successfully
+                            established or failed to be established. It also handles if we want to close the Bluetooth
+                            connection. <br><br> Create a new project with the empty activity template and select the
+                            appropriate
+                            name for your app. For this app we will create 2 activities and 2 Java classes :<br><br>
+
+
+                            <span># activity_main.xml file</span> <br>
+                            <div
+                                style="width: 100%; height: 500px; overflow: auto; font-size: 20px; border: 2px solid var(--text-color);padding: 10px;">
+                                <pre>
+<span><</span>?xml version="1.0" encoding="utf-8"?>
+<span><</span>RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.philipgo.arduinobluetoothrccar.MainActivity"> 
+
+<span><</span>Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="Forward"
+        android:id="@+id/forward_btn"
+        android:layout_marginTop="74dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/forward_right_btn"
+        android:layout_toStartOf="@+id/forward_right_btn">
+
+<span><</span>Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="forward LEFT"
+        android:id="@+id/forward_left_btn"
+        android:layout_below="@+id/forward_btn"
+        android:layout_toLeftOf="@+id/forward_btn"
+        android:layout_toStartOf="@+id/forward_btn" >
+
+<span><</span>Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="forward RIGHT"
+        android:id="@+id/forward_right_btn"
+        android:layout_above="@+id/reverse_btn"
+        android:layout_toRightOf="@+id/reverse_btn"
+        android:layout_toEndOf="@+id/reverse_btn" />
+
+<span><</span>Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="REVERSE"
+        android:id="@+id/reverse_btn"
+        android:layout_below="@+id/forward_left_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp" />
+
+<span><</span>Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="Reverse Left"
+        android:id="@+id/reverse_left_btn"
+        android:layout_below="@+id/forward_left_btn"
+        android:layout_alignLeft="@+id/forward_left_btn"
+        android:layout_alignStart="@+id/forward_left_btn"
+        android:layout_centerHorizontal="true" />
+
+<span><</span>Button
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:text="Reverse Right"
+        android:id="@+id/reverse_right_btn"
+        android:layout_below="@+id/forward_right_btn"
+        android:layout_toRightOf="@+id/reverse_btn"
+        android:layout_alignRight="@+id/forward_right_btn"
+        android:layout_alignEnd="@+id/forward_right_btn" />
+
+<span><</span>Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Connect to Bluetooth Device"
+        android:id="@+id/bluetooth_connect_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+<span><</span>/RelativeLayout>
+
+                                </pre>
+                            </div><br><br>
+                            <span># MainActivity.java file</span> <br>
+                            <div
+                                style="width: 100%; height: 500px;font-size: 20px; overflow: auto; border: 2px solid var(--text-color);padding: 10px;">
+                                <pre>
+package com.mcuhq.simplebluetooth;
+
+import android.Manifest;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothSocket;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Method;
+import java.util.Set;
+import java.util.UUID;
+
+public class MainActivity extends AppCompatActivity {
+
+    private final String TAG = MainActivity.class.getSimpleName();
+
+    private static final UUID BT_MODULE_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB"); // "random" unique identifier
+
+    // #defines for identifying shared types between calling functions
+    private final static int REQUEST_ENABLE_BT = 1; // used to identify adding bluetooth names
+    public final static int MESSAGE_READ = 2; // used in bluetooth handler to identify message update
+    private final static int CONNECTING_STATUS = 3; // used in bluetooth handler to identify message status
+
+    // GUI Components
+    private TextView mBluetoothStatus;
+    private TextView mReadBuffer;
+    private Button mScanBtn;
+    private Button mOffBtn;
+    private Button mListPairedDevicesBtn;
+    private Button mDiscoverBtn;
+    private ListView mDevicesListView;
+    private CheckBox mLED1;
+
+    private BluetoothAdapter mBTAdapter;
+    private Set<span><</span>BluetoothDevice> mPairedDevices;
+    private ArrayAdapter<span><</span>String> mBTArrayAdapter;
+
+    private Handler mHandler; // Our main handler that will receive callback notifications
+    private ConnectedThread mConnectedThread; // bluetooth background worker thread to send and receive data
+    private BluetoothSocket mBTSocket = null; // bi-directional client-to-client data path
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mBluetoothStatus = (TextView)findViewById(R.id.bluetooth_status);
+        mReadBuffer = (TextView) findViewById(R.id.read_buffer);
+        mScanBtn = (Button)findViewById(R.id.scan);
+        mOffBtn = (Button)findViewById(R.id.off);
+        mDiscoverBtn = (Button)findViewById(R.id.discover);
+        mListPairedDevicesBtn = (Button)findViewById(R.id.paired_btn);
+        mLED1 = (CheckBox)findViewById(R.id.checkbox_led_1);
+
+        mBTArrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
+        mBTAdapter = BluetoothAdapter.getDefaultAdapter(); // get a handle on the bluetooth radio
+
+        mDevicesListView = (ListView)findViewById(R.id.devices_list_view);
+        mDevicesListView.setAdapter(mBTArrayAdapter); // assign model to view
+        mDevicesListView.setOnItemClickListener(mDeviceClickListener);
+
+        // Ask for location permission if not already allowed
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
+
+
+        mHandler = new Handler(Looper.getMainLooper()){
+            @Override
+            public void handleMessage(Message msg){
+                if(msg.what == MESSAGE_READ){
+                    String readMessage = null;
+                    try {
+                        readMessage = new String((byte[]) msg.obj, "UTF-8");
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
+                    mReadBuffer.setText(readMessage);
+                }
+
+                if(msg.what == CONNECTING_STATUS){
+                    if(msg.arg1 == 1)
+                        mBluetoothStatus.setText("Connected to Device: " + msg.obj);
+                    else
+                        mBluetoothStatus.setText("Connection Failed");
+                }
+            }
+        };
+
+        if (mBTArrayAdapter == null) {
+            // Device does not support Bluetooth
+            mBluetoothStatus.setText("Status: Bluetooth not found");
+            Toast.makeText(getApplicationContext(),"Bluetooth device not found!",Toast.LENGTH_SHORT).show();
+        }
+        else {
+
+            mLED1.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    if(mConnectedThread != null) //First check to make sure thread created
+                        mConnectedThread.write("1");
+                }
+            });
+
+
+            mScanBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    bluetoothOn();
+                }
+            });
+
+            mOffBtn.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    bluetoothOff();
+                }
+            });
+
+            mListPairedDevicesBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v){
+                    listPairedDevices();
+                }
+            });
+
+            mDiscoverBtn.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    discover();
+                }
+            });
+        }
+    }
+
+    private void bluetoothOn(){
+        if (!mBTAdapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+            mBluetoothStatus.setText("Bluetooth enabled");
+            Toast.makeText(getApplicationContext(),"Bluetooth turned on",Toast.LENGTH_SHORT).show();
+
+        }
+        else{
+            Toast.makeText(getApplicationContext(),"Bluetooth is already on", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // Enter here after user selects "yes" or "no" to enabling radio
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent Data){
+        // Check which request we're responding to
+        if (requestCode == REQUEST_ENABLE_BT) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
+                // The user picked a contact.
+                // The Intent's data Uri identifies which contact was selected.
+                mBluetoothStatus.setText("Enabled");
+            }
+            else
+                mBluetoothStatus.setText("Disabled");
+        }
+    }
+
+    private void bluetoothOff(){
+        mBTAdapter.disable(); // turn off
+        mBluetoothStatus.setText("Bluetooth disabled");
+        Toast.makeText(getApplicationContext(),"Bluetooth turned Off", Toast.LENGTH_SHORT).show();
+    }
+
+    private void discover(){
+        // Check if the device is already discovering
+        if(mBTAdapter.isDiscovering()){
+            mBTAdapter.cancelDiscovery();
+            Toast.makeText(getApplicationContext(),"Discovery stopped",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            if(mBTAdapter.isEnabled()) {
+                mBTArrayAdapter.clear(); // clear items
+                mBTAdapter.startDiscovery();
+                Toast.makeText(getApplicationContext(), "Discovery started", Toast.LENGTH_SHORT).show();
+                registerReceiver(blReceiver, new IntentFilter(BluetoothDevice.ACTION_FOUND));
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Bluetooth not on", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    final BroadcastReceiver blReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if(BluetoothDevice.ACTION_FOUND.equals(action)){
+                BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                // add the name to the list
+                mBTArrayAdapter.add(device.getName() + "\n" + device.getAddress());
+                mBTArrayAdapter.notifyDataSetChanged();
+            }
+        }
+    };
+
+    private void listPairedDevices(){
+        mBTArrayAdapter.clear();
+        mPairedDevices = mBTAdapter.getBondedDevices();
+        if(mBTAdapter.isEnabled()) {
+            // put it's one to the adapter
+            for (BluetoothDevice device : mPairedDevices)
+                mBTArrayAdapter.add(device.getName() + "\n" + device.getAddress());
+
+            Toast.makeText(getApplicationContext(), "Show Paired Devices", Toast.LENGTH_SHORT).show();
+        }
+        else
+            Toast.makeText(getApplicationContext(), "Bluetooth not on", Toast.LENGTH_SHORT).show();
+    }
+
+    private AdapterView.OnItemClickListener mDeviceClickListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            if(!mBTAdapter.isEnabled()) {
+                Toast.makeText(getBaseContext(), "Bluetooth not on", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            mBluetoothStatus.setText("Connecting...");
+            // Get the device MAC address, which is the last 17 chars in the View
+            String info = ((TextView) view).getText().toString();
+            final String address = info.substring(info.length() - 17);
+            final String name = info.substring(0,info.length() - 17);
+
+            // Spawn a new thread to avoid blocking the GUI one
+            new Thread()
+            {
+                @Override
+                public void run() {
+                    boolean fail = false;
+
+                    BluetoothDevice device = mBTAdapter.getRemoteDevice(address);
+
+                    try {
+                        mBTSocket = createBluetoothSocket(device);
+                    } catch (IOException e) {
+                        fail = true;
+                        Toast.makeText(getBaseContext(), "Socket creation failed", Toast.LENGTH_SHORT).show();
+                    }
+                    // Establish the Bluetooth socket connection.
+                    try {
+                        mBTSocket.connect();
+                    } catch (IOException e) {
+                        try {
+                            fail = true;
+                            mBTSocket.close();
+                            mHandler.obtainMessage(CONNECTING_STATUS, -1, -1)
+                                    .sendToTarget();
+                        } catch (IOException e2) {
+                            //insert code to deal with this
+                            Toast.makeText(getBaseContext(), "Socket creation failed", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    if(!fail) {
+                        mConnectedThread = new ConnectedThread(mBTSocket, mHandler);
+                        mConnectedThread.start();
+
+                        mHandler.obtainMessage(CONNECTING_STATUS, 1, -1, name)
+                                .sendToTarget();
+                    }
+                }
+            }.start();
+        }
+    };
+
+    private BluetoothSocket createBluetoothSocket(BluetoothDevice device) throws IOException {
+        try {
+            final Method m = device.getClass().getMethod("createInsecureRfcommSocketToServiceRecord", UUID.class);
+            return (BluetoothSocket) m.invoke(device, BT_MODULE_UUID);
+        } catch (Exception e) {
+            Log.e(TAG, "Could not create Insecure RFComm Connection",e);
+        }
+        return  device.createRfcommSocketToServiceRecord(BT_MODULE_UUID);
+    }
+}
+
+                                </pre>
+                            </div> <br><br>
+                            <span># AndroidManifest.xml file</span> <br>
+                            <div
+                                style="width: 100%; height: 500px;font-size: 20px; overflow: auto; border: 2px solid var(--text-color);padding: 10px;">
+                                <pre>
+
+<span><</span>?xml version="1.0" encoding="utf-8"?>
+<span><</span>manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mcuhq.simplebluetooth">
+
+    <span><</span>uses-permission android:name="android.permission.BLUETOOTH" />
+    <span><</span>uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <span><</span>uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <span><</span>uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <span><</span>permission android:name="android.permission.BLUETOOTH" android:label="BLUETOOTH" />
+    <span><</span>permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <span><</span>permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <span><</span>permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <span><</span>application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <span><</span>activity android:name=".MainActivity">
+        <span><</span>intent-filter>
+        <span><</span>action android:name="android.intent.action.MAIN" />
+
+        <span><</span>category android:name="android.intent.category.LAUNCHER" />
+        <span><</span>/intent-filter>
+        <span><</span>/activity>
+        <span><</span>/application>
+
+        <span><</span>/manifest>
+
+                                </pre>
+                            </div> <br><br>
+                            <button><a href="other/app.apk" download="kdt">Download App</a></button> 
+                            <button><a href="other/app.zip" download="allfile">Download AppCode Zip</a></button> <br><br>
+
+                            <span>* Web App Code </span><br>
+                            This web for all information of my project and ppt srs and known my group members.
+                            If you have any problem then contact our group member. <a
+                                href="https://kdt-143.web.app">click here</a> for checking my website. <br><br>
+                            <button><a href="other/ppt.pptx">Download pptx</a></button>
+                            <button><a href="other/ppt.html">Download ppt(html)</a></button>
+                            <button><a href="other/ppt.pdf">Download ppt(pdf)</a></button>
+                            <button><a href="other/srs.pptx">Download srs</a></button>
+
+                        </h3>
+
+
+                        <h3>
+                            <span>6. Project Aim</span><br>
+                            <span>* </span>
+                            This project's main motive is to expand the knowledge for smart
+                            micro-controllers like Arduino, which is widely used in the latest
+                            IoT technologies. <br><br>
+
+                            <span>*</span>
+                            Making the use of Connectivity Modules like Bluetooth HC-05, to
+                            understand the different modes of operating and communications
+                            with the micro-controller board. <br><br>
+
+                            <span>*</span>
+                            To get familiar with Codes and programs used for the controlling
+                            of the Arduino Uno board. <br><br>
+
+                            <span>*</span>
+                            Introductory project for Every Electronics And Electrical Student,
+                            to get the working of the Arduino board and its software. <br><br>
+                        </h3>
+
+
+
+                        <h3>
+                            <span> Comment </span> <br>
+                            Thank you to everyone who responded to this web, I hope you liked my webpage if it's
+                            really then please added many suggestions for great commenting platform else dislike this or
+                            send feedback to mail. <br> <br>
+                            The comments you are leaving are building your reputation.
+                            Make it a good one that shows you are knowledgeable and
+                            even-handed, instead of a disagreeable jerk with little to
+                            add to the conversation.
+                            <br>
+                            Make sure write your name in comment box plzzzzzzzzzzz!
+
+                            <br><br>
+                            <div class="comment">
+                                <input type="text" autocomplete="off" id="comment" placeholder="Type Your Comment">
+                                <input type="hidden" name="date" id="comment_datetime">
+                                <input type="submit" id="cmt_btn" onclick="send_comment_function()" value="commit">
+                            </div>
+                        </h3>
+                    </div>
+
+
+
+
+                    <div class="comment_show">
+                        <div class="comment_header">
+
+                            <div class="left">
+                                <h3>
+                                    <p id="num_of_cmt">comment's</p>
+                                </h3>
+                            </div>
+
+
+                            <div class="right">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;"
+                                    xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <path d="M426.667,0.002H51.2C22.923,0.002,0,22.925,0,51.202v273.067c0,28.277,22.923,51.2,51.2,51.2h60.587l-9.284,83.456
+			c-1.035,9.369,5.721,17.802,15.09,18.837c4.838,0.534,9.674-1.023,13.292-4.279l108.919-98.014h186.863
+			c28.277,0,51.2-22.923,51.2-51.2V51.202C477.867,22.925,454.944,0.002,426.667,0.002z M443.733,324.269
+			c0,9.426-7.641,17.067-17.067,17.067H233.25c-4.217,0.001-8.284,1.564-11.418,4.386l-80.452,72.414l6.434-57.839
+			c1.046-9.367-5.699-17.809-15.067-18.856c-0.63-0.07-1.263-0.106-1.897-0.105H51.2c-9.426,0-17.067-7.641-17.067-17.067V51.202
+			c0-9.426,7.641-17.067,17.067-17.067h375.467c9.426,0,17.067,7.641,17.067,17.067V324.269z" />
+                                        </g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                    <g>
+                                    </g>
+                                </svg>
+
+                            </div>
+                        </div>
+
+                        <ol id="show_comment">
+                            <li id="comment_body" class="comment_body">
+                                <div class="comment_logo">
+                                    <i class="fa fa-2x fa-user" style="color: var(--text-color);"></i>
+                                </div>
+                                <div class="comment_box">
+                                    <p>
+                                        <i style="color: var(--text-color);"> KDT </i>
+                                    </p>
+                                    <p id="show_name">When you will commenting on my page then show all comments from my
+                                        database otherwise not show any comments</p><br>
+                                    <p><b><a> Thanks for visit my web </a></b></p>
+                                </div>
+                            </li>
+                        </ol>
+
+                    </div>
+
+                </section>
+            </header>
+
+           
+        </div>
+    </div>
+
+
+
+    <script src="js/main.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/time.js"></script>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script>
+
+
+        document.getElementById("comment").addEventListener("keyup", function (e) {
+
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                document.getElementById("cmt_btn").click();
+            }
+        });
+
+        var count = 10;
+        function send_comment_function() {
+            count--;
+
+            if (count <= 8) {
+                swal("Sorry !!!!", "Only One Comment allowed.", "warning");
+            } else {
+                swal("Success", "", "success");
+            }
+
+            var fconfig = {
+                apiKey: "AIzaSyDc5timuQtu7Y4ZxFHafV-NTwT4sU29u8w",
+                authDomain: "kdt-143.firebaseapp.com",
+                databaseURL: "https://kdt-143-default-rtdb.firebaseio.com",
+                projectId: "kdt-143",
+                storageBucket: "kdt-143.appspot.com",
+                messagingSenderId: "559265165592"
+            };
+
+            firebase.initializeApp(fconfig);
+            var comment = document.getElementById("comment").value;
+            var date = document.getElementById("comment_datetime").value;
+            var name = "Unknown";
+            if ((/^[0-9A-Za-z .]{0,}(kamleen)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Mohd Kamleen";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(kdt-143)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "KDT";
+                comment = "Thanks to all of you";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(tab)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Mohd Tabish";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(daniyal)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Daniyal Ansari";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(abhijeet)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Abhijeet Mishra";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(abrar)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Mohd Abrar";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(irfan)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Mohd Irfan";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(ankur)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Ankur Kori";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(susil)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Susil Bhai ";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(badal)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Badal Bhai";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(anwar)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Anwar Ansari";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(chandan)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Chandan Panday";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(abid)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Abid Ali";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(mannu)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Mannu Mishra";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(shivani)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Shivani";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(priyansi)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Priyanshi";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(radha)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Radha";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(anchal)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Anchal Yadav";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(yuraj)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Yuraj";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(shivam)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Shivam Bhai";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(prins)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Prins Bhai";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(rajnees)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Rajnis Bhai";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(sagar)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Abid";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(Sagar Bhai)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Abid";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(rahul)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Rahul Bhai";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(neda)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Neda";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(krishna)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Krishna Bhai";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(sobhna)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Sobhna Gpta";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(sivangi)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Shivangi Pal";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(bhavesh)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Bhavesh Bhai";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(anupam)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Anupam Bhai";
+            }
+            if ((/^[0-9A-Za-z .]{0,}(sohit)[ .0-9A-Za-z]{0,}$/).test(comment.toLowerCase())) {
+                name = "Sohit Bhai";
+            }
+
+
+
+
+            firebase.database().ref('projectComment').push({
+                "comment": comment,
+                "name": name,
+                "date": date
+            });
+
+
+            firebase.database().ref('projectComment').once('value', function (snapshot) {
+                document.getElementById("num_of_cmt").innerText = snapshot.numChildren() + 1 + "comment's";
+                snapshot.forEach(function (childSnapshot) {
+                    var childData = childSnapshot.val();
+                    document.getElementById("show_comment").innerHTML += `
+                                <li id="comment_body" class="comment_body">
+                                    <div class="comment_logo">
+                                        <i class="fa fa-2x fa-user" style="color: var(--text-color);"></i>
+                                        </div>
+                                    <div class="comment_box">
+                                        <p> 
+                                            <b style="color: var(--text-color);"> ${childData.name} </b>
+                                            <i style="color: var(--text-color);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${childData.date} </i>
+                                        </p>
+                                        <p id="show_name"> ${childData.comment} </p><br>
+                                        <p><b><a href="#comment"> reply </a></b></p>
+                                    </div>
+                                </li>`;
+                });
+            });
+        }
+
+
+    </script>
+
+</body>
+
+</html>
