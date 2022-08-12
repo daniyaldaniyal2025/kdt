@@ -14,7 +14,7 @@
 #define ldr A2
 char data;  
 int ldrVal;
-
+ 
 
 void setup() {
   pinMode(int1, OUTPUT);
